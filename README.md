@@ -21,4 +21,4 @@ After this, you should run:
 
 Then run the app locally with:
 
-`rails s`
+`rails s`# rate-shelf
