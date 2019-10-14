@@ -1,0 +1,25 @@
+<h4 class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
+									  aria-expanded="false">Categories <span class="caret"></span></a>
+  <ul class="dropdown-menu" role="menu">
+	<% Category.all.each do |category| %>
+	  <li class="<%= 'active' if params[:category] == category.name %>">
+		<%= link_to category.name, books_path(category: category.name), class: "link" %>
+	  </li>
+	<% end %>
+ </ul>
+</h4>
+<h1 class="current-category" ><%= params[:category] %></h1>
+<% if @books.count == 0 %>
+  <h1>There are no books in this category yet  = (</h1>
+<% else %>  
+  <div class="row" >	
+		<% @books.each do |book| %>
+		  <div class="col-md-3">
+			  <a href="/books/<%= book.id %>" >
+			    <%= image_tag book.book_cover.url(:book_index), class: 'book' %>
+			  </a>
+		  </div>
+		<% end %>
+  </div>	
+<% end %>
