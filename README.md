@@ -14,7 +14,7 @@ To get the application running, follow the steps below:
 `bundle install`
 
 After this, you should run:
-`rails db:create
+`rails db:create`
 `rails db:migrate`
 
 Then run the app locally with:
