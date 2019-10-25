@@ -11,14 +11,12 @@ This is an application that allows users to create and share book profiles as we
 
 ## Setup
 To get the application running, follow the steps below:
-
 `bundle install`
 
 After this, you should run:
-
-`rails db:create`
+`rails db:create
 `rails db:migrate`
 
 Then run the app locally with:
+`rails s`
 
-`rails s`# rate-shelf
