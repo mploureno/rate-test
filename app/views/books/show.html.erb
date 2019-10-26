@@ -4,12 +4,12 @@
 	</div>
 	<div class="col-md-8">
 	  <div  class="book-info">	
-		<h2 class="book-title"><%= @book.title %></h2>	
-		<h3 class="book-author"><spam>From</spam> <%= @book.author %></h3>
-		<h4 class="avg-rating">Genre: <%= @book.category.name %></h4>
-		<div class="average-review-rating" data-score="<%= @average_review %>"></div>
-		<span class="number-of-reviews"><%= @book.reviews.count %> reviews</span>
-		<p class="book-desc"><%= @book.description %></p>
+			<h2 class="book-title"><%= @book.title %></h2>	
+			<h3 class="book-author"><spam>From</spam> <%= @book.author %></h3>
+			<h4 class="avg-rating">Genre: <%= @book.category.name %></h4>
+			<div class="average-review-rating" data-score="<%= @average_review %>"></div>
+			<span class="number-of-reviews"><%= @book.reviews.count %> reviews</span>
+			<p class="book-desc"><%= @book.description %></p>
 	  </div>	
 	</div>	
 </div>
@@ -17,9 +17,9 @@
 	<div class="col-md-4">
 	  <div>
 	    <div class="reviews">  	
-		<!-- Where the ratings feature will go -->
-		<h1>Reviews</h1>	
-		<%= render @book.reviews %>
+				<!-- Where the ratings feature will go -->
+				<h1>Reviews</h1>	
+				<%= render @book.reviews %>
 	    </div>
 	  </div>
 	</div>
