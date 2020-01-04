@@ -914,9 +914,14 @@ GEM
       mimemagic (~> 0.3.0)
       terrapin (~> 0.6.0)
     public_suffix (4.0.1)
+<<<<<<< HEAD
     puma (4.3.1)
       nio4r (~> 2.0)
     rack (2.0.7)
+=======
+    puma (3.12.2)
+    rack (2.0.8)
+>>>>>>> f650bb4d7faf55de662e10f855d54f88ce57083c
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.3)
