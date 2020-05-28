@@ -25,6 +25,8 @@ Setup config/database.yml and run:
 Test your configuration:
 
 `rails s --binding=127.0.0.1`
+
 `curl http://127.0.0.1:3000`
+
 *By default, application listens on port 3000*
 
