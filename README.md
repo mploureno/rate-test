@@ -1,6 +1,6 @@
 # Rate Shelf
 
-This is an application that allows users to create and share book profiles as well as rating other user's posts. Users can also filter the books by category.
+This is an application that allows users to create and share book profiles as well as rate other user's posts. Users can also filter the books by category.
 
 *I have essentially based my code on the Ryan Hemrick's [GitHub](https://github.com/RyanHemrick/Book-Review) and [Youtube tutorial](https://www.youtube.com/playlist?list=PLsyJtAEU4pGw3PCKAA4POHK6C2G2nnpLF).* 
 
@@ -12,15 +12,19 @@ This is an application that allows users to create and share book profiles as we
 ## Setup
 To get the application running, follow the steps below:
 
+Run:
+
 `bundle install`
 
-After this, you should run:
+Setup config/database.yml and run:
 
 `rails db:create`
 
-`rails db:migrate`
+`rake db:migrate`
 
-Then run the app locally with:
+Test your configuration:
 
-`rails s`
+`rails s --binding=127.0.0.1`
+`curl http://127.0.0.1:3000`
+*By default, application listens on port 3000*
 
