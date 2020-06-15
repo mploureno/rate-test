@@ -7,26 +7,30 @@ This is an application that allows users to create and share book profiles as we
 ## Requirements
 - Ruby 2.6.3
 - Rails 5.2.3
-- Sqlite3
+- PostgreSQL
 
 ## Setup
-To get the application running, follow the steps below:
+To get the application running, do the following:
 
 Run:
-
-`bundle install`
-
+```shell
+bundle install
+```
 Setup config/database.yml and run:
-
-`rails db:create`
-
-`rake db:migrate`
+```shell
+rails db:create
+```
+```shell
+rake db:migrate
+```
 
 Test your configuration:
-
-`rails s --binding=127.0.0.1`
-
-`curl http://127.0.0.1:3000`
+```shell
+rails s --binding=127.0.0.1
+```
+```shell
+curl http://127.0.0.1:3000
+```
 
 ###### *By default, application listens on port 3000*
 
