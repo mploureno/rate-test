@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BookReview</title>
+    <title>Rate Shelf</title>
     <%= render 'layouts/rails_default' %>
     <%= render 'layouts/shim' %>
   </head>
   <body>  
     <%= render 'devise/shared/navgation' %>
-  	<p class="notice"><%= notice %></p>
-  	<p class="alert"><%= alert %></p>
-    <div class="container" >  
+  	<main>
+      <p class="notice"><%= notice %></p>
+    	<p class="alert"><%= alert %></p>
       <%= yield %>  
-    </div>
+    </main>  
   </body>
 </html>
