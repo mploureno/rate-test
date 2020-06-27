@@ -1,143 +1,143 @@
 .navbar {
-	margin: 0;
-	padding: 0;
-	position: fixed;
-	display: flex;
-	transition: width 600ms ease;
-	background-color: var(--bg-secondary);	
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  display: flex;
+  transition: width $transition-speed ease;
+  background-color: $bg-secondary;	
 }
 
 .navbar-nav {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  list-style: none;
 }
 
 .nav-link {
-	display: flex;
-	height: 5rem;
-	align-items: center;
-	text-decoration: none;
-	color: var(--txt-primary);
-	svg {
-		width: 2rem;
-		min-width: 2rem;
-		margin: 0 1.5rem;
-	}
+  display: flex;
+  height: 5rem;
+  align-items: center;
+  text-decoration: none;
+  color: $txt-primary;
+  svg {
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
+  }
 }
 
 .nav-item {
-	width: 100%;
-	&:last-child {
-		margin-top: auto;
-	}
+  width: 100%;
+  &:last-child {
+    margin-top: auto;
+  }
 }
 
 .link-text {
-	margin-left: 1rem;
-	display: none;
+  margin-left: 1rem;
+  display: none;
 }
 
 .logo	{
-	height: 5rem;
-	width: 100vw;
-	margin-bottom: 1rem;
-	display: flex;
-	align-items: center;
-	text-decoration: none;
-	color: var(--txt-primary);
-	.logo-text {
-		margin-left: 1.5rem;
-		display: none;
-		position: absolute;
-		font-weight: 900;
-		text-transform: uppercase;
-		text-shadow: 1px 1px 1px #DAA520;
-		font-size: 3rem;
-		color:black;
-	}	
-	.logo-ext {	
-		margin-left: auto;
-		display: none;
-		align-items: center;
-		span {
-			color:black;
-			font-weight: bold;
-			text-shadow: 1px 1px #DAA520;
-			letter-spacing: 0.3ch;
-			font-size: 1.2rem;
-		}
-		svg {
-			width: 2rem;
-			min-width: 2rem;
-			margin: 0 1.5rem;
-			transform: rotate(0deg);
-			transition: var(--transition-speed);
-		}
-	}
-	&:hover {
-		.logo-ext {
-			display: inline;
-		}		
-	}
+  height: 5rem;
+  width: 100vw;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $txt-primary;
+  .logo-text {
+    margin-left: 1.5rem;
+    display: none;
+    position: absolute;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #DAA520;
+    font-size: 3rem;
+    color:black;
+  }	
+  .logo-ext {	
+    margin-left: auto;
+    display: none;
+    align-items: center;
+    span {
+      color:black;
+      font-weight: bold;
+      text-shadow: 1px 1px #DAA520;
+      letter-spacing: 0.3ch;
+      font-size: 1.2rem;
+    }
+    svg {
+      width: 2rem;
+      min-width: 2rem;
+      margin: 0 1.5rem;
+      transform: rotate(0deg);
+      transition: $transition-speed;
+    }
+  }
+  &:hover {
+    .logo-ext {
+      display: inline;
+    }		
+  }
 }
 
 .fa-primary {
-	color: #fccf09;
+  color: #fccf09;
 }
 
 .fa-secondary {  
-	color: #daa520;  
+  color: #daa520;  
 }
 
 .fa-primary,
 .fa-secondary {
-	transition: var(--transition-speed);
+  transition: $transition-speed;
 }
 
 main {
-	margin-left: 5rem;
-	padding: 1.5rem;
-	background-color: var(--bg-primary);
+  margin-left: 5rem;
+  padding: 1.5rem;
+  background-color: $bg-primary;
 }
 
 @media only screen and (max-width: 600px) {
-	.navbar	{
-		bottom: 0;
-		height: 5rem;
-		width: 100vw;
-		.logo	{
-			display: none;
-		}
-	}
+  .navbar	{
+    bottom: 0;
+    height: 5rem;
+    width: 100vw;
+    .logo	{
+      display: none;
+    }
+  }
 
-	.nav-link {
-		justify-content: center;
-	}
+  .nav-link {
+    justify-content: center;
+  }
 
-	main {
-		margin: 0;
-	}
+  main {
+    margin: 0;
+  }
 }
 
 @media only screen and (min-width: 600px) {
-	.navbar {	
-		height: 100vh;
-		width: 5rem;
-		flex-direction: column;
-		&:hover {
-			width: 13rem;
-			.link-text,		
-			.logo-text {
-				display: inline;
-			}
-		}
-	}
+  .navbar {
+    height: 100vh;
+    width: 5rem;
+    flex-direction: column;
+    &:hover {
+      width: 13rem;
+      .link-text,
+      .logo-text {
+        display: inline;
+      }
+    }
+  }
 
-	.navbar-nav	{
-		flex-direction: column;
-	}
+  .navbar-nav	{
+    flex-direction: column;
+  }
 }
