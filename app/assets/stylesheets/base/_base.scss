@@ -8,3 +8,16 @@ p.alert, p.notice {
   margin: 0;
 }
 
+body {
+  main {
+    margin-left: 5rem;
+    padding: 1.5rem;
+    background-color: $bg-primary;
+  }
+
+  @media only screen and (max-width: 600px) {
+    main {
+      margin: 0;
+    }
+  } 
+}
