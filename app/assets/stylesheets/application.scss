@@ -1,16 +1,12 @@
-@import "variables";
-@import "scrollbar";
-@import "navbar";
-@import "books";
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+@import
+  "abstracts/mixins",
+  "abstracts/variables";
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
+@import 
+  "base/base";
 
-p.alert, p.notice {
-	margin: 0;
-}
+@import 
+  "layout/navbar";
 
+@import 
+  url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');

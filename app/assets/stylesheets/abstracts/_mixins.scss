@@ -1,0 +1,17 @@
+@mixin scrollbars($heigth, $width, $bar, $thumb) {
+  &::-webkit-scrollbar {
+    height: $height;
+  }
+
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: $bar;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: $thumb;
+  }  
+}
