@@ -14,25 +14,25 @@
     text-decoration: none;
     color: $txt-primary;
     .logo-text {
-      margin-left: 1.5rem;
       display: none;
-      position: absolute;
+      font-family: $open-sans;
       font-weight: 900;
-      text-transform: uppercase;
-      text-shadow: 1px 1px 1px #DAA520;
       font-size: 3rem;
       color:black;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 1px $gold;
     }
     .logo-ext {
       margin-left: auto;
       display: none;
       align-items: center;
       span {
-        color:black;
+        font-family: $open-sans;
         font-weight: bold;
-        text-shadow: 1px 1px #DAA520;
-        letter-spacing: 0.3ch;
         font-size: 1.2rem;
+        color:black;
+        text-shadow: 1px 1px $gold;
+        letter-spacing: 0.3ch;
       }
       svg {
         width: 2rem;
@@ -61,11 +61,12 @@
         margin-top: auto;
       }
       .nav-link {
-        display: flex;
         height: 5rem;
+        display: flex;
         align-items: center;
-        text-decoration: none;
+        font-family: $open-sans;
         color: $txt-primary;
+        text-decoration: none;
         svg {
           width: 2rem;
           min-width: 2rem;
@@ -74,6 +75,7 @@
         .link-text {
           margin-left: 1rem;
           display: none;
+          font-size: 0.9em;
         }
       }
     }
@@ -81,11 +83,11 @@
 }
 
 .fa-primary {
-  color: #fccf09;
+  color: $light-gold;
 }
 
 .fa-secondary {  
-  color: #daa520;  
+  color: $gold;  
 }
 
 .fa-primary,
