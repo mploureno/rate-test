@@ -38,10 +38,16 @@
     </li>
     <li class="nav-item">
     </li>
-    <% if current_user.present? %>
+    <% if user_signed_in? %>
       <li class="nav-item">
         <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link' do %>
           <span class="link-text">SignOut</span>
+        <% end %>
+      </li>
+    <% else %>
+      <li class="nav-item">
+        <%= link_to new_user_session_path, class: 'nav-link' do %>
+          <span class="link-text">Login</span>
         <% end %>
       </li>
     <% end %>
