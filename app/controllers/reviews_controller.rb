@@ -27,7 +27,7 @@ class ReviewsController < ApplicationController
       redirect_to book_path(@book)
     else
       render 'edit'
-    end     
+    end
   end
 
   def destroy 

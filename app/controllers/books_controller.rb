@@ -16,59 +16,55 @@ class BooksController < ApplicationController
       @average_review = 0
     else
       @average_review = @book.reviews.average(:rating).round(2)
-    end    
-  end 
+    end
+  end
 
   def new
     @book = current_user.books.build
     @categories = Category.all.map{ |c| [c.name, c.id] }
-  end	
-  
+  end
+
   def create
-  	@book = current_user.books.build(book_params)
+    @book = current_user.books.build(book_params)
     @book.category_id = params[:category_id]
-  	 
+     
     if @book.save
-  	   redirect_to root_path
-  	else
-  	  render 'new'  
-    end	
-  end 
+       redirect_to root_path
+    else
+      render 'new'
+    end
+  end
   
-  def edit 
-    #Users should be able to edit genre
+  def edit
     @categories = Category.all.map{ |c| [c.name, c.id] }
-  end	
+  end
   
   def update 
     @book.category_id = params[:category_id]
     if @book.update(book_params)
       redirect_to book_path(@book)
     else
-    	render 'edit'
-    end  	
+      render 'edit'
+    end
   end
 
   def destroy
     @book.destroy
-    redirect_to root_path  
+    redirect_to root_path
   end
 
   private
+  def book_params
+    params.require(:book).permit(
+      :title, 
+      :description, 
+      :author,
+      :category_id,
+      :book_cover
+    )
+  end
 
-		  def book_params
-		    params.require(:book).permit(
-		      :title, 
-		      :description, 
-		      :author,
-          :category_id,
-          :book_cover
-		    )
-		  end
-
-		  def find_book
-      @book = Book.find(params[:id])
-		  end
-
-
+  def find_book
+    @book = Book.find(params[:id])
+  end
 end
