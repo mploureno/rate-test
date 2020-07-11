@@ -16,7 +16,6 @@
     .logo-text {
       display: none;
       font-family: $open-sans;
-      font-weight: 900;
       font-size: 3rem;
       color:black;
       text-transform: uppercase;
@@ -24,9 +23,10 @@
     }
     .logo-ext {
       margin-left: auto;
-      display: none;
+      display: flex;
       align-items: center;
       span {
+        display: none;
         font-family: $open-sans;
         font-weight: bold;
         font-size: 1.2rem;
@@ -35,16 +35,16 @@
         letter-spacing: 0.3ch;
       }
       svg {
-        width: 2rem;
-        min-width: 2rem;
-        margin: 0 1.5rem;
+        width: 1.5em;
+        margin: 0 10px;
         transform: rotate(0deg);
         transition: $transition-speed;
       }
     }
     &:hover {
       .logo-ext {
-        display: inline;
+        span { display: inline; }        
+        svg { transform: rotate(-180deg); }
       }
     }
   }
