@@ -9,10 +9,10 @@ p.alert, p.notice {
 }
 
 body {
+  background-color: $bg-primary;
   main {
-    margin-left: 5rem;
+    margin: 1.5em 0 0 5em;
     padding: 1.5rem;
-    background-color: $bg-primary;
   }
 
   @media only screen and (max-width: 600px) {
