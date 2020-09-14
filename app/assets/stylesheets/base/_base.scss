@@ -10,4 +10,19 @@ p.alert, p.notice {
 
 body {
   background-color: $bg-primary;
+  main {
+    padding: 30px;
+    position: absolute;
+    top: 5rem;
+    left: 8rem;
+  }
+
+  @media (max-width: 575px) {
+    main {
+      margin: 0;
+      padding: 30px;
+      position: static;
+    }
+  }
 }
+
