@@ -1,9 +1,11 @@
 <%= simple_form_for @book, :html => { :multipart => true } do |f| %>
-  <%= select_tag(:category_id, options_for_select(@categories), 
-                 :prompt => "Genre") %>
+  <%= select_tag( options_for_select(@categories),
+                   :category_id, 
+                   :prompt => "Genre") %>
+
   <%= f.file_field :book_cover %>
-  <%= f.input  :title, label: "Book Title" %>
-  <%= f.input  :description %>
-  <%= f.input  :author %>
-  <%= f.button :submit, :class => 'btn-custom2' %>
+  <%= f.input      :title, label: "Book Title" %>
+  <%= f.input      :description %>
+  <%= f.input      :author %>
+  <%= f.button     :submit, :class => 'btn-custom2' %>
 <% end %>
