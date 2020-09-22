@@ -114,7 +114,7 @@
   transition: $transition-speed;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 575px) {
   .navbar {
     bottom: 0;
     height: 5rem;
