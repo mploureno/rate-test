@@ -12,17 +12,14 @@ body {
   background-color: $bg-primary;
 
   main {
+    min-height: 100vh;
     padding: 30px;
-    position: absolute;
-    top: 5rem;
-    left: 8rem;
   }
 
-  @media (max-width: 575px) {
+  @media (min-width: 768px) {
     main {
-      margin: 0;
-      padding: 30px;
-      position: static;
+      margin-left: 5rem;
+      padding: 6rem;
     }
   }
 }
