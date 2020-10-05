@@ -1,11 +1,11 @@
-<div class="col-md-6 col-md-offset-3">
-  <div class="signup-form">
+<div class="form">
+  <div>
     <h2>Sign up</h2>
 
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= f.error_notification %>
 
-        <div class="form-inputs">
+        <div>
           <%= f.input :email,
                       required: true,
                       autofocus: true,
@@ -20,7 +20,7 @@
         </div>
 
         <div class="form-actions">
-          <%= f.button :submit, "Sign up", class: 'btn-custom2' %>
+          <%= f.button :submit, "Sign up" %>
         </div>
       <% end %>
 
