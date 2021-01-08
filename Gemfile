@@ -38,4 +38,4 @@ group :test do
   gem 'shoulda-matchers', '~> 4.4', '>= 4.4.1'
 end
 
-# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
