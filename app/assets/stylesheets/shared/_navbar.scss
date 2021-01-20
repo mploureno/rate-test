@@ -11,12 +11,13 @@
     height: 5rem;
     width: 100vw;
     margin-bottom: 1rem;
+    position: relative;
     display: flex;
     align-items: center;
     text-decoration: none;
     color: $txt-primary;
 
-    .logo-text {
+    .brand {
       height: 4rem;
       width: 11rem;
       margin-left: 1rem;
@@ -29,34 +30,24 @@
       background-color: $red;
     }
 
-    .logo-ext {
-      margin-left: auto;
-      display: flex;
-      align-items: center;
-
-      span {
-        display: none;
-        font-family: $open-sans;
-        font-weight: bold;
-        font-size: 1.2rem;
-        color:black;
-        text-shadow: 1px 1px $gold;
-        letter-spacing: 0.3ch;
-      }
-
-      svg {
-        width: 1.5em;
-        margin: 0 10px;
-        transform: rotate(0deg);
-        transition: $slow;
-      }
+    .special-text {
+      position: absolute;
+      right: 64px;
+      display: none;
+      font-family: $open-sans;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color:black;
+      text-shadow: 1px 1px $gold;
+      letter-spacing: 0.3ch;
     }
 
-    &:hover {
-      .logo-ext {
-        span { display: inline; }
-        svg { transform: rotate(-180deg); }
-      }
+    .arrow {
+      width: 2.3rem;
+      position: absolute;
+      left: 20px;
+      transform: rotate(0deg);
+      transition: $slow;
     }
   }
 
@@ -64,8 +55,17 @@
     width: 10rem;
 
     .logo {
-      .logo-text {
+      .brand {
         display: inline;
+      }
+
+      .arrow {
+        left: 132px;
+        animation: spin 1.4s linear infinite;
+      }
+
+      &:hover {
+        .special-text { display: inline; }
       }
     }
 
@@ -137,7 +137,7 @@
   transition: $slow;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .navbar {
     bottom: 0;
     height: 5rem;
