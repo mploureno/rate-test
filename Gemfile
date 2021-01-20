@@ -38,4 +38,7 @@ group :test do
   gem 'shoulda-matchers', '~> 4.4', '>= 4.4.1'
 end
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+# Uncomment the following line if you're running Rails
+# on a native Windows system:
+# gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
